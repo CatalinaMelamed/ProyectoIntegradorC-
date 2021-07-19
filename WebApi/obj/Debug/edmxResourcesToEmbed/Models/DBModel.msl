@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBClienteApiModelStoreContainer" CdmEntityContainer="DBClienteApiEntities1">
+    <EntitySetMapping Name="Articuloes">
+      <EntityTypeMapping TypeName="DBClienteApiModel.Articulo">
+        <MappingFragment StoreEntitySet="Articulo">
+          <ScalarProperty Name="ArticuloId" ColumnName="ArticuloId" />
+          <ScalarProperty Name="ArticuloNombre" ColumnName="ArticuloNombre" />
+          <ScalarProperty Name="ArticuloPrecio" ColumnName="ArticuloPrecio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="DBClienteApiModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetodoPagoes">
+      <EntityTypeMapping TypeName="DBClienteApiModel.MetodoPago">
+        <MappingFragment StoreEntitySet="MetodoPago">
+          <ScalarProperty Name="PagoId" ColumnName="PagoId" />
+          <ScalarProperty Name="MetodoPago1" ColumnName="MetodoPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

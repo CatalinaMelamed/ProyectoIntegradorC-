@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Mvc.Models.mvcArticulo>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticuloNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticuloPrecio)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArticuloNombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArticuloPrecio)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ArticuloId }) |
+
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ArticuloId })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.ActionLink("Nuevo Articulo", "Create", null, new { @class = "btn btn-danger" })
+    @Html.ActionLink("Volver al menu", "Index", "Home", null, new { @class = "btn btn-danger" })
+</body>
+</html>

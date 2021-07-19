@@ -1,0 +1,33 @@
+﻿@model Mvc.Models.mvcArticulo
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <div>
+        <h2>Eliminar Articulo</h2>
+        @using (Html.BeginForm("Delete", "Cliente", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.ArticuloId)
+            <p>
+                @Html.LabelFor(model => model.ArticuloNombre)
+                @Html.EditorFor(model => model.ArticuloNombre)
+                @Html.ValidationMessageFor(model => model.ArticuloNombre)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.ArticuloPrecio)
+                @Html.EditorFor(model => model.ArticuloPrecio)
+                @Html.ValidationMessageFor(model => model.ArticuloPrecio)
+            </p>
+        
+            <input type="submit" value="Eliminar" class="btn button" />
+            @Html.ActionLink("Volver a la lista", "Index")
+        }
+    </div>
+</body>
+</html>

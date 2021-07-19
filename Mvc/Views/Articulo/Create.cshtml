@@ -1,0 +1,40 @@
+﻿@model Mvc.Models.mvcArticulo
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+    <div>
+        <h2>Nuevo Articulo</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.ArticuloId)
+            <p>
+                @Html.LabelFor(model => model.ArticuloNombre)
+                @Html.EditorFor(model => model.ArticuloNombre)
+                @Html.ValidationMessageFor(model => model.ArticuloNombre)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.ArticuloPrecio)
+                @Html.EditorFor(model => model.ArticuloPrecio)
+                @Html.ValidationMessageFor(model => model.ArticuloPrecio)
+            </p>
+
+            <input type="submit" value="Actualizar" class="btn btn-danger" />
+            @Html.ActionLink("Volver a la lista", "Index", "Home", null, new { @class = "btn btn-danger" })
+        }
+    </div>
+
+</body>
+</html>

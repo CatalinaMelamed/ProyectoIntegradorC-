@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBClienteApiModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Articulo">
+    <Key>
+      <PropertyRef Name="ArticuloId" />
+      <PropertyRef Name="ArticuloNombre" />
+      <PropertyRef Name="ArticuloPrecio" />
+    </Key>
+    <Property Name="ArticuloId" Type="Int32" Nullable="false" />
+    <Property Name="ArticuloNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArticuloPrecio" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MetodoPago">
+    <Key>
+      <PropertyRef Name="PagoId" />
+      <PropertyRef Name="MetodoPago1" />
+    </Key>
+    <Property Name="PagoId" Type="Int32" Nullable="false" />
+    <Property Name="MetodoPago1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBClienteApiEntities11" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articuloes" EntityType="Self.Articulo" />
+    <EntitySet Name="MetodoPagoes" EntityType="Self.MetodoPago" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,36 @@
+﻿
+@model Mvc.Models.mvcMetodoPago
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+    <div>
+        <h2>Nuevo Metodo de Pago</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.PagoId)
+            <p>
+                @Html.LabelFor(model => model.MetodoPago1)
+                @Html.EditorFor(model => model.MetodoPago1)
+                @Html.ValidationMessageFor(model => model.MetodoPago1)
+            </p>
+
+            <input type="submit" value="Actualizar" class="btn button" />
+            @Html.ActionLink("Volver a la lista", "Index")
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿body {
+    background-color:blanchedalmond;
+   
+}
+h1 {
+    background-color: coral;
+    padding: 10px;
+    color: midnightblue;
+    text-align: center;
+}
+
+
+h2 {
+    background-color: coral;
+    padding: 10px;    
+    color:midnightblue;
+    text-align: center;
+}
+div{
+    text-align: center;
+}

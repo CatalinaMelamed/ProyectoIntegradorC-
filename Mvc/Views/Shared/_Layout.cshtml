@@ -1,0 +1,60 @@
+﻿
+@model Mvc.Models.mvcCliente
+   
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Las Rosas Carmesi</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Css/Design css.css" rel="stylesheet" />
+    <style>
+        #login-div {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            border: 1px solid #ccc;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Restaurante - Las Rosas Carmesi</h1>
+        <div id="login-div">
+            @using (Html.BeginForm("Login", "Layout", FormMethod.Post))
+            {
+                <td style="text-decoration:underline">¡Bienvenido!</td>
+                <table>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.DNI)
+                            @Html.EditorFor(model => model.DNI)
+                            @Html.ValidationMessageFor(model => model.DNI)
+                        </td>
+                    </tr>
+
+                </table>
+                
+                <input type="submit" value="Aceptar" class="btn btn-danger" />
+                @Html.ActionLink("Nuevo Cliente", "Create", "Cliente", null, new { @class = "btn btn-danger" })
+            }
+        </div>
+
+
+   
+
+ 
+
+    <div class="container body-content">
+
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Catalina Melamed</p>
+        </footer>
+
+    </div>
+</body>
+</html>

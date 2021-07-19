@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBClienteApiModel1StoreContainer" CdmEntityContainer="DBClienteApiEntities11">
+    <EntitySetMapping Name="Articuloes">
+      <EntityTypeMapping TypeName="DBClienteApiModel1.Articulo">
+        <MappingFragment StoreEntitySet="Articulo">
+          <ScalarProperty Name="ArticuloId" ColumnName="ArticuloId" />
+          <ScalarProperty Name="ArticuloNombre" ColumnName="ArticuloNombre" />
+          <ScalarProperty Name="ArticuloPrecio" ColumnName="ArticuloPrecio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetodoPagoes">
+      <EntityTypeMapping TypeName="DBClienteApiModel1.MetodoPago">
+        <MappingFragment StoreEntitySet="MetodoPago">
+          <ScalarProperty Name="PagoId" ColumnName="PagoId" />
+          <ScalarProperty Name="MetodoPago1" ColumnName="MetodoPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBClienteApiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Articulo">
+    <Key>
+      <PropertyRef Name="ArticuloId" />
+    </Key>
+    <Property Name="ArticuloId" Type="int" Nullable="false" />
+    <Property Name="ArticuloNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ArticuloPrecio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="DNI" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MetodoPago">
+    <Key>
+      <PropertyRef Name="PagoId" />
+    </Key>
+    <Property Name="PagoId" Type="int" Nullable="false" />
+    <Property Name="MetodoPago" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBClienteApiModelStoreContainer">
+    <EntitySet Name="Articulo" EntityType="Self.Articulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MetodoPago" EntityType="Self.MetodoPago" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

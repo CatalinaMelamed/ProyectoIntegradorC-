@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBClienteApiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Articulo">
+    <Key>
+      <PropertyRef Name="ArticuloId" />
+    </Key>
+    <Property Name="ArticuloId" Type="Int32" Nullable="false" />
+    <Property Name="ArticuloNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArticuloPrecio" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MetodoPago">
+    <Key>
+      <PropertyRef Name="PagoId" />
+    </Key>
+    <Property Name="PagoId" Type="Int32" Nullable="false" />
+    <Property Name="MetodoPago1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBClienteApiEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articuloes" EntityType="Self.Articulo" />
+    <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+    <EntitySet Name="MetodoPagoes" EntityType="Self.MetodoPago" />
+  </EntityContainer>
+</Schema>

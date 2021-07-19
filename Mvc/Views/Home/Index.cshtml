@@ -1,0 +1,45 @@
+﻿@model Mvc.Models.DataSelectList
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Las Rosas Carmesi</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Css/Design css.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h2>Restaurante- La Rosa Camersi</h2>
+        <div class="form-group">
+          
+            @Html.ActionLink("Ir a Articulos", "Index", "Articulo", null, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Ir a Metodo de Pago", "Index", "MetodoPago", null, new { @class = "btn btn-danger" })
+        </div>
+
+        <div>
+            @Html.DropDownList("Clientes", Model.Clientes.Select(i => new SelectListItem { Text = i.NombreCompleto, Value = i.ClienteId.ToString() }), "Seleccionar Cliente")
+
+
+            @Html.DropDownListFor(i => i.Articulos,
+            Model.Articulos.Select(x => new SelectListItem
+                 {
+                     Text = x.NombrePrecio,
+            Value = x.NombrePrecio.ToString()
+                 }), "Seleccionar Articulo")
+
+            @Html.DropDownList("Metodo de Pago", new List<SelectListItem>
+            {
+               new SelectListItem { Text = "Efectivo", Value = "1", Selected = true },
+               new SelectListItem { Text = "Tarjeta Credito", Value = "2" },
+               new SelectListItem { Text = "Tarjeta Debito", Value = "3" }
+            }, "Seleccionar Metodo de Pago")
+        </div>
+    </div>
+</body>
+</html>

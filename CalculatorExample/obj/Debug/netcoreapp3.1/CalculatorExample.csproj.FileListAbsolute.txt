@@ -1,0 +1,4 @@
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\CalculatorExample\obj\Debug\netcoreapp3.1\CalculatorExample.csproj.AssemblyReference.cache
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\CalculatorExample\obj\Debug\netcoreapp3.1\CalculatorExample.AssemblyInfoInputs.cache
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\CalculatorExample\obj\Debug\netcoreapp3.1\CalculatorExample.AssemblyInfo.cs
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\CalculatorExample\obj\Debug\netcoreapp3.1\CalculatorExample.csproj.CoreCompileInputs.cache

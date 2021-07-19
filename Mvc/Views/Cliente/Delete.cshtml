@@ -1,0 +1,47 @@
+﻿@model Mvc.Models.mvcCliente
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <div>
+        <h2>Eliminar Cliente</h2>
+        @using (Html.BeginForm("Delete", "Cliente", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.ClienteId)
+            <p>
+                @Html.LabelFor(model => model.Nombre)
+                @Html.EditorFor(model => model.Nombre)
+                @Html.ValidationMessageFor(model => model.Nombre)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.Apellido)
+                @Html.EditorFor(model => model.Apellido)
+                @Html.ValidationMessageFor(model => model.Apellido)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.DNI)
+                @Html.EditorFor(model => model.DNI)
+                @Html.ValidationMessageFor(model => model.DNI)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.FechaNacimiento)
+                @Html.EditorFor(model => model.FechaNacimiento)
+                @Html.ValidationMessageFor(model => model.FechaNacimiento)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.Ciudad)
+                @Html.EditorFor(model => model.Ciudad)
+                @Html.ValidationMessageFor(model => model.Ciudad)
+            </p>
+            <input type="submit" value="Eliminar" class="btn button"/>            
+            @Html.ActionLink("Volver a la lista", "Index")
+        }
+    </div>
+</body>
+</html>

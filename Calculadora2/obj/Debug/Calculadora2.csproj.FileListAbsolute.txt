@@ -1,0 +1,6 @@
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\Calculadora2\bin\Debug\Calculadora2.dll
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\Calculadora2\bin\Debug\Calculadora2.pdb
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\Calculadora2\obj\Debug\Calculadora2.csproj.CoreCompileInputs.cache
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\Calculadora2\obj\Debug\Calculadora2.dll
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\Calculadora2\obj\Debug\Calculadora2.pdb
+C:\Users\c.melamed.marti\Documents\APIinMVC\WebApiInMvc\Calculadora2\obj\Debug\Calculadora2.csproj.AssemblyReference.cache

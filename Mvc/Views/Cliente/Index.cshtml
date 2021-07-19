@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Mvc.Models.mvcCliente>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+    
+    <table class="table table-success table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DNI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ClienteId })
+
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ClienteId })
+
+                    @Html.ActionLink("Detalles", "Detail", new { id = item.ClienteId })
+
+                </td>
+
+            </tr>
+        }
+
+
+
+
+    </table>
+    
+    @Html.ActionLink("Nuevo Cliente", "Create", null, new { @class = "btn btn-danger" })
+    @Html.ActionLink("Volver al menu", "Index", "Layout", null, new { @class = "btn btn-danger" })
+
+
+</body>
+</html>

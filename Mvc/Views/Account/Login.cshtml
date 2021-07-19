@@ -1,0 +1,41 @@
+﻿@model Mvc.Models.Account.Login
+
+
+<hgroup class="title">
+    <h2>@ViewBag.Title.</h2>
+    <p>Debe iniciar sesión para completar esa acción. Ingrese sus credenciales a continuación.</p>
+</hgroup>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "No se pudo iniciar Sesión. Por favor, corrija los errores e inténtelo nuevamente.")
+
+    <div>
+        <span class="editor-label">
+            @Html.LabelFor(m => m.Usuario)
+        </span>
+        <span class="editor-field">
+            @Html.TextBoxFor(m => m.Usuario, new { @class = "text-box" })
+        </span>
+    </div>
+
+    <div>
+        <span class="editor-label">
+            @Html.LabelFor(m => m.Contraseña)
+        </span>
+        <span class="editor-field">
+            @Html.PasswordFor(m => m.Contraseña, new { @class = "text-box" })
+        </span>
+    </div>
+
+    <div class="editorfield">
+        @Html.CheckBoxFor(m => m.RecordarCuenta)
+        @Html.LabelFor(m => m.RecordarCuenta, new { @class = "checkbox" })
+    </div>
+    <input type="submit" value="Iniciar Sesión" />
+
+    <p>
+        @Html.ActionLink("Registrarse", "Register") Si no tienes una cuenta.
+    </p>}
+
+
