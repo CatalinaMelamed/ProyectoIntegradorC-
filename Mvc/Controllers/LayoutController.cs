@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using System.Windows.Forms;
 using WebApi.Models;
 
 namespace Mvc.Controllers
@@ -17,21 +18,7 @@ namespace Mvc.Controllers
         public ActionResult Index()
         { 
             return View("~/Views/Shared/_Layout.cshtml");
-        }
-
-        //public bool already_dni(string dni)
-        //{
-        //    bool existe = false;
-        //    using (MySqlConnection connection = new MySqlConnection(MyConnectionString))
-        //    {
-        //        connection.Open();
-        //        string query = "SELECT COUNT(*) FROM dni WHERE nick_dni=@DNI"
-        //    }
-        //}
-
-
-
-
+        }    
         public ActionResult Login(Mvc.Models.mvcCliente mvcCliente)
         {
             if (!String.IsNullOrEmpty(mvcCliente.DNI))
@@ -40,15 +27,19 @@ namespace Mvc.Controllers
                 bool encontreDNI = response.Content.ReadAsAsync<bool>().Result;
                 if (encontreDNI != true)
                 {
+                    MessageBox.Show("Error al Ingresar DNI");
                     return RedirectToAction("Index");
+                    
                 }
                 else
                 {
+                    DialogResult dialogResult = MessageBox.Show("¡Bienvenido! Que desea pedir hoy?");
                     return RedirectToAction("Index", "Home");
                 }
             }
             else
             {
+                MessageBox.Show("Error No has ingresado ningún DNI");
                 return RedirectToAction("Index");
 
             }

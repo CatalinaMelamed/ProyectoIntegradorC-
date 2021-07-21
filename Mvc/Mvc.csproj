@@ -388,11 +388,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariables.cs" />
-    <Compile Include="Models\Account\Register.cs" />
     <Compile Include="Models\DataSelectList.cs" />
     <Compile Include="Models\mvcMetodoPago.cs" />
     <Compile Include="Models\mvcArticulo.cs" />
     <Compile Include="Models\mvcCliente.cs" />
+    <Compile Include="Services\Calculadora.cs" />
+    <Compile Include="Services\ICalculadora.cs" />
+    <Compile Include="Services\ServicioCalculadora\Calculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -495,10 +497,6 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Calculadora2\Calculadora2.csproj">
-      <Project>{39457bfd-4b23-40af-bfd1-a0caddaa1ff1}</Project>
-      <Name>Calculadora2</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WebApi\WebApi.csproj">
       <Project>{DB1E7C70-0D95-4A38-BC53-E940E9152100}</Project>
       <Name>WebApi</Name>

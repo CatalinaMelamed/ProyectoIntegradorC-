@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "Mvc\Mvc.csproj", "{B8D006AD-6877-4F44-AF03-13FCE2CDFFF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWebFormEx", "MvcWebFormEx\MvcWebFormEx.csproj", "{FF894D12-6A67-476F-A521-D56AB5EE07B2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora2", "Calculadora2\Calculadora2.csproj", "{39457BFD-4B23-40AF-BFD1-A0CADDAA1FF1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{B8D006AD-6877-4F44-AF03-13FCE2CDFFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D006AD-6877-4F44-AF03-13FCE2CDFFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D006AD-6877-4F44-AF03-13FCE2CDFFF0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF894D12-6A67-476F-A521-D56AB5EE07B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF894D12-6A67-476F-A521-D56AB5EE07B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF894D12-6A67-476F-A521-D56AB5EE07B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF894D12-6A67-476F-A521-D56AB5EE07B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39457BFD-4B23-40AF-BFD1-A0CADDAA1FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39457BFD-4B23-40AF-BFD1-A0CADDAA1FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39457BFD-4B23-40AF-BFD1-A0CADDAA1FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39457BFD-4B23-40AF-BFD1-A0CADDAA1FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
