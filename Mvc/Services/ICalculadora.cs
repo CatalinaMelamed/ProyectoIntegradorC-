@@ -9,8 +9,7 @@ namespace Mvc.Services
 
     public interface ICalculadora
     {
-        int Sumar(int n1, int n2);
-        
+        int Sumar(int n1, int n2);        
         int Restar(int n1, int n2);
         int Multiplicar(int n1, int n2);
 
