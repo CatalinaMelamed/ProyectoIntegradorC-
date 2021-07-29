@@ -1,4 +1,5 @@
 ﻿using Mvc.Models;
+using Mvc.Services.ServicioCalculadora;
 using Mvc.Services;
 using System;
 using System.Collections.Generic;
@@ -20,16 +21,30 @@ namespace Mvc.Controllers
             DataSelectList selectList = new DataSelectList();
             selectList.Clientes = empList;
 
-            List<mvcArticulo>  artList ;
+            List<mvcArticulo> artList;
             HttpResponseMessage responsearticulo = GlobalVariables.WebApiClient.GetAsync("Articuloes").Result;
             artList = responsearticulo.Content.ReadAsAsync<List<mvcArticulo>>().Result;
             selectList.Articulos = artList;
-            return View("~/Views/Home/Index.cshtml", selectList);
+           
+            return View("~/Views/Home/Index.cshtml", selectList); 
 
-            
+                    
 
         }
-       
-        
+        [HttpGet]
+        public JsonResult AjaxCalcular(List<string> articulos)
+        {
+            ICalculadora calculadora = new Calculadora();
+            return new JsonResult(calculadora.Sumar(articulos);
+         
+
+        }
+
+
+
+
+
+
+
     }
 }
